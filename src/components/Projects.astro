@@ -16,20 +16,36 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Unsplash clone",
     description:
-      "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "clone of the famous 'unsplash' image page, made with python and flask, obtaining the images from its api.",
+    link: "",
+    github: "",
+    image: "/projects/616shots_so.jpg",
+    tags: [],
   },
+  {
+    title: "URL Shorter",
+    description: "URL shortener, whose function is to simplify long and traditional urls, with more attractive ones.",
+    link: "",
+    github: "",
+    image: "/projects/470shots_so.jpg",
+    tags: []
+  },
+  {
+    title: "Login",
+    description: "This is a simple login, whose only function is to obtain the data from said form, and validate it with the data inserted in the database.",
+    link: "",
+    github: "",
+    image: "/projects/22shots_so.jpg",
+    tags: []
+  }
 ]
 ---
 
 {
   PROJECTS.map(({ image, title, description, tags }) => (
-    <article>
+    <article class="mt-10">
       <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
         {title}
       </h3>
@@ -48,7 +64,7 @@ const PROJECTS = [
       </ul>
       <img
         loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 aspect-video"
+        class="rounded"
         src={image}
         alt={`Captura de pantalla del proyecto ${image}`}
       />
