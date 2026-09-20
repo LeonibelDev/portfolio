@@ -1,61 +1,71 @@
 ---
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-
-const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-}
 const PROJECTS = [
   {
-    title: "Unsplash clone",
+    title: "MyTechBlog.dev",
     description:
-      "clone of the famous 'unsplash' image page, made with python and flask, obtaining the images from its api.",
-    link: "",
-    github: "",
-    image: "/projects/616shots_so.jpg",
-    tags: [],
+      "High-performance technical blogging platform built with Go and PostgreSQL, focused on backend scalability, efficient data retrieval, and modern content publishing workflows.",
+    github: "https://github.com/LeonibelDev/askme",
+    tags: ["Go", "PostgreSQL", "Backend", "API"],
   },
   {
-    title: "URL Shorter",
-    description: "URL shortener, whose function is to simplify long and traditional urls, with more attractive ones.",
-    link: "",
-    github: "",
-    image: "/projects/470shots_so.jpg",
-    tags: []
+    title: "Cuurt.cc",
+    description:
+      "Scalable URL shortener with encrypted redirects and custom Base62 encoding, designed to optimize lookup performance and keep the service efficient under traffic demand.",
+    github: "https://github.com/LeonibelDev/url-shortener",
+    tags: ["Go", "Security", "Algorithms", "System Design"],
   },
   {
-    title: "Login",
-    description: "This is a simple login, whose only function is to obtain the data from said form, and validate it with the data inserted in the database.",
-    link: "",
-    github: "",
-    image: "/projects/22shots_so.jpg",
-    tags: []
-  }
+    title: "pgg-cli",
+    description:
+      "Terminal-first CLI tool created to automate repetitive development tasks, including command parsing, flags, and file system operations to improve developer productivity.",
+    github: "https://github.com/LeonibelDev/pgg-cli",
+    tags: ["Go", "CLI", "Automation", "Developer Tools"],
+  },
+  {
+    title: "SaveMyPass.dev",
+    description:
+      "Secure password management application centered on zero-knowledge principles, protected storage, and user-friendly credential handling.",
+    github: "https://github.com/LeonibelDev/SaveMyPass.dev",
+    tags: ["Security", "Product", "Backend", "Privacy"],
+  },
+  {
+    title: "Secure Studio",
+    description:
+      "Spring Boot backend API for sensor management and real-time monitoring, designed for operational visibility and service scalability.",
+    github: "https://github.com/LeonibelDev/secure-studio",
+    tags: ["Java", "Spring Boot", "REST", "Monitoring"],
+  },
 ]
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags }) => (
-    <article class="mt-10">
-      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
-        {title}
-      </h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <img
-        loading="lazy"
-        class="rounded"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-    </article>
-  ))
-}
+<div class="grid gap-6">
+  {
+    PROJECTS.map(({ title, description, github, tags }) => (
+      <article class="rounded-3xl border border-[#e5e5e7] bg-white/90 p-6 shadow-[0_1px_0_rgba(0,0,0,0.04),0_12px_30px_rgba(15,23,42,0.03)] transition-transform duration-200 hover:-translate-y-1">
+        <div class="mb-4 flex flex-wrap items-center gap-2">
+          {tags.map((tag) => (
+            <span class="rounded-full border border-[#e5e5e7] bg-[#f7f7f8] px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.05em] text-[#5b5b60]">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <h3 class="mb-3 text-2xl font-semibold text-[#1d1d1f]">{title}</h3>
+        <p class="mb-5 text-base leading-7 text-[#57575d]">{description}</p>
+
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-[#dfe3ea] bg-[#f5f7fb] px-4 py-2 text-sm font-medium text-[#1f2937] transition hover:bg-[#eef2f7]"
+        >
+          View project
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17 17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </a>
+      </article>
+    ))
+  }
+</div>

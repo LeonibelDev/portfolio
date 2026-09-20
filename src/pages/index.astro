@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Badge from "../components/Badge.astro"
 import SectionContainer from "../components/SectionContainer.astro"
 import LinkedInIcon from "../components/icons/LinkedIn.astro"
 import SocialPill from "../components/SocialPill.astro"
@@ -13,62 +12,70 @@ import Projects from "../components/Projects.astro"
 ---
 
 <Layout
-  title="Leonibel Segura - Web developer"
-  description="Web developer"
+  title="Leonibel Segura | Full-Stack Developer"
+  description="Full-stack developer focused on backend architecture, APIs, databases, and scalable web products."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32" id="me">
-      <h1
-        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-      <span class="title">Hey, Im Leonibel Segura</span> <a
-          href="https://www.linkedin.com/in/leonibel-segura-ramirez-14a7392a9/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Available to work</Badge>
-        </a>
-      </h1>
-      <h2
-        class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
-      >
-        <span>Web developer, with more than 3 years of experience. In areas such as backend, frontend and databases.</span>
-      </h2>
+    <SectionContainer class="pt-20 pb-16" id="me">
+      <div class="flex flex-col gap-8">
+        <div class="inline-flex w-fit items-center gap-2 rounded-full border border-[#e5e5e7] bg-white/80 px-3 py-1.5 text-sm font-medium text-[#4b5563] shadow-[0_1px_0_rgba(0,0,0,0.02)]">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#34c759]"></span>
+          Dominican Republic
+        </div>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/leonibel-segura-ramirez-14a7392a9/">
-          <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/leonibeldev">
-          <GitHubIcon class="size-4 md:size-6" />
-           GitHub
-        </SocialPill>
-        <SocialPill href="mailto:leonibel.ramirez@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          leonibel.ramirez@gmail.com
-        </SocialPill>
-      </nav>
+        <div class="space-y-5">
+          <h1 class="text-[3rem] font-black uppercase leading-[0.9] tracking-[-0.08em] text-[#1d1d1f] md:text-[6rem]">
+            Leonibel<br />Segura
+          </h1>
+
+          <p class="max-w-4xl text-lg font-medium uppercase tracking-[-0.05em] text-[#2e2e32] md:text-[2.3rem]">
+            Full-stack developer building robust systems and products with real business impact.
+          </p>
+
+          <p class="max-w-2xl text-base leading-7 text-[#57575d] md:text-lg">
+            I design and build APIs, services, and product features with a focus on performance,
+            maintainability, and clean engineering decisions.
+          </p>
+        </div>
+
+        <nav class="flex flex-wrap gap-3">
+          <SocialPill href="https://www.linkedin.com/in/leonibel-segura-ramirez-14a7392a9/">
+            <LinkedInIcon class="size-4 md:size-5" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/leonibeldev">
+            <GitHubIcon class="size-4 md:size-5" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:leonibel.ramirez@gmail.com">
+            <MailIcon class="size-4 md:size-5" />
+            leonibel.ramirez@gmail.com
+          </SocialPill>
+        </nav>
+
+        <div class="flex flex-wrap gap-2 pt-2 text-sm text-[#4b4b4f]">
+          <span class="rounded-full border border-[#e5e5e7] bg-[#f7f7f8] px-3 py-1.5 text-[#3f3f46]">Go</span>
+          <span class="rounded-full border border-[#e5e5e7] bg-[#f7f7f8] px-3 py-1.5 text-[#3f3f46]">Java</span>
+          <span class="rounded-full border border-[#e5e5e7] bg-[#f7f7f8] px-3 py-1.5 text-[#3f3f46]">Spring Boot</span>
+          <span class="rounded-full border border-[#e5e5e7] bg-[#f7f7f8] px-3 py-1.5 text-[#3f3f46]">PostgreSQL</span>
+          <span class="rounded-full border border-[#e5e5e7] bg-[#f7f7f8] px-3 py-1.5 text-[#3f3f46]">REST APIs</span>
+          <span class="rounded-full border border-[#e5e5e7] bg-[#f7f7f8] px-3 py-1.5 text-[#3f3f46]">Docker</span>
+        </div>
+      </div>
     </SectionContainer>
-    
 
     <SectionContainer id="experiencia">
-      <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-      >
-        <Briefcase class="size-7" />
-        Work experience
+      <h2 class="mb-8 flex items-center gap-3 text-3xl font-semibold text-[#1d1d1f]">
+        <Briefcase class="size-7 text-[#1d1d1f]" />
+        Experience
       </h2>
       <Experience />
     </SectionContainer>
 
     <SectionContainer id="proyectos">
-      <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-      >
-        <CodeIcon class="size-7" />
-         Projects
+      <h2 class="mb-8 flex items-center gap-3 text-3xl font-semibold text-[#1d1d1f]">
+        <CodeIcon class="size-7 text-[#1d1d1f]" />
+        Featured projects
       </h2>
       <Projects />
     </SectionContainer>
