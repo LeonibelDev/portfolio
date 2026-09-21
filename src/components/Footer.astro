@@ -1,11 +1,30 @@
-<footer class="mx-auto mb-10 w-full max-w-4xl px-4">
-  <div class="flex flex-col items-center justify-between gap-4 rounded-[1.75rem] border border-[#e5e5e7] bg-white/85 px-6 py-5 text-sm text-[#52525b] shadow-[0_1px_0_rgba(0,0,0,0.03),0_10px_30px_rgba(15,23,42,0.02)] backdrop-blur-xl md:flex-row">
-    <span>© {new Date().getFullYear()} Leonibel Segura</span>
+---
+import GitHubIcon from "./icons/GitHub.astro"
+import LinkedInIcon from "./icons/LinkedIn.astro"
+import MailIcon from "./icons/Mail.astro"
+---
 
-    <div class="flex items-center gap-5">
-      <a href="https://github.com/leonibeldev" target="_blank" rel="noopener noreferrer" class="transition hover:text-[#111827]">GitHub</a>
-      <a href="https://www.linkedin.com/in/leonibel-segura-ramirez-14a7392a9/" target="_blank" rel="noopener noreferrer" class="transition hover:text-[#111827]">LinkedIn</a>
-      <a href="mailto:leonibel.ramirez@gmail.com" class="transition hover:text-[#111827]">Email</a>
+<footer class="mt-8 border-t border-[#24313a]/10 bg-[#24313a] text-white shadow-[0_-12px_30px_rgba(23,33,43,0.06)]">
+  <div class="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-7 md:flex-row md:items-center md:justify-between md:px-8">
+    <div>
+      <p class="font-semibold text-white">Leonibel Segura</p>
+      <p class="mt-1 text-xs text-white/45">Full-stack developer · Santo Domingo, Dominican Republic</p>
+      <p class="mt-2 text-xs text-white/30">© {new Date().getFullYear()} Leonibel Segura</p>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-white/55">
+      <a href="https://github.com/leonibeldev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition hover:text-white">
+        <GitHubIcon class="size-4" />
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/leonibel-segura-ramirez-14a7392a9/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition hover:text-white">
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </a>
+      <a href="mailto:leonibel.ramirez@gmail.com" class="inline-flex items-center gap-2 border border-[#2f6fed] px-3 py-2 font-semibold text-[#6f9cf5] transition hover:bg-[#2f6fed] hover:text-white">
+        <MailIcon class="size-4" />
+        Email
+      </a>
     </div>
   </div>
 </footer>
